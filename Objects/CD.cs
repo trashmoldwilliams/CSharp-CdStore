@@ -10,7 +10,7 @@ namespace CDstore.objects
     private int _id;
     private static List<CD> _instances = new List<CD> {};
 
-    public CD (string artist, string albumTitle, int price = 10)
+    public CD (string artist, string albumTitle, int price)
     {
       _artist = artist;
       _albumTitle = albumTitle;
