@@ -19,6 +19,11 @@ namespace CDstore.objects
       _id = _instances.Count;
     }
 
+    public bool SearchArtist(string match)
+    {
+      return (_artist == match);
+    }
+
     public static List<CD> GetAll()
     {
       return _instances;
