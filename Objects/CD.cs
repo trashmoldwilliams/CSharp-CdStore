@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CD.objects
+namespace CDstore.objects
 {
   public class CD
   {
@@ -17,6 +17,11 @@ namespace CD.objects
       _price = price;
       _instances.Add(this);
       _id = _instances.Count;
+    }
+
+    public static List<CD> GetAll()
+    {
+      return _instances;
     }
 
     public string GetArtist()

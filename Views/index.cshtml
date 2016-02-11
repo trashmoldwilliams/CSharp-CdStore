@@ -1,5 +1,16 @@
 <h1>CD Store</h1>
-@if (@Model.Count == 0)
+<!-- @if (@Model.Count == 0)
 {
   <h3>No CD's in the store</h3>
-}
+} -->
+<h2>Current Selection</h2>
+<ul>
+  @foreach (var cd in Model)
+  {
+    <li>@cd.GetAlbumTitle()</li>
+  }
+</ul>
+
+<p>
+  <a href="/cds/new">Add a cd to our selection</a>
+</p>
