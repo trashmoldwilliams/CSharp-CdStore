@@ -36,6 +36,12 @@ namespace CDstore
         }
         return View["search_results.cshtml", returnCds];
       };
+      Get["/album/{id}"]= parameters =>{
+        // System.Console.WriteLine(parameters.id);
+        List<CD> allCds = CD.GetAll();
+        CD album = CD.Find(parameters.id);
+        return View["/cd_detail.cshtml", album];
+      };
     }
   }
 }
